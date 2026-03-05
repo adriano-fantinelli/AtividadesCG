@@ -47,7 +47,7 @@ set(EXERCISES
     Hello3D
     TriangleTex
     SpherePhong
-   
+    ObjetosCena3D
 )
 
 add_compile_options(-Wno-pragmas)
