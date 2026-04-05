@@ -48,6 +48,7 @@ set(EXERCISES
     TriangleTex
     SpherePhong
     ObjetosCena3D
+    AdicionandoTexturas
 )
 
 add_compile_options(-Wno-pragmas)
