@@ -49,6 +49,7 @@ set(EXERCISES
     SpherePhong
     ObjetosCena3D
     AdicionandoTexturas
+    AdicionandoIluminacao
 )
 
 add_compile_options(-Wno-pragmas)
