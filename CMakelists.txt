@@ -50,6 +50,7 @@ set(EXERCISES
     ObjetosCena3D
     AdicionandoTexturas
     AdicionandoIluminacao
+    CameraEmPrimeiraPessoa
 )
 
 add_compile_options(-Wno-pragmas)
