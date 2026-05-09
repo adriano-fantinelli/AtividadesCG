@@ -51,6 +51,7 @@ set(EXERCISES
     AdicionandoTexturas
     AdicionandoIluminacao
     CameraEmPrimeiraPessoa
+    DefinindoTrajetorias
 )
 
 add_compile_options(-Wno-pragmas)
