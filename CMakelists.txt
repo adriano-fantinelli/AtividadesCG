@@ -52,6 +52,7 @@ set(EXERCISES
     AdicionandoIluminacao
     CameraEmPrimeiraPessoa
     DefinindoTrajetorias
+    VivencialObjetos3D
 )
 
 add_compile_options(-Wno-pragmas)
