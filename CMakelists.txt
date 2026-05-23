@@ -53,6 +53,7 @@ set(EXERCISES
     CameraEmPrimeiraPessoa
     DefinindoTrajetorias
     VivencialObjetos3D
+    VivencialVisualizador3D
 )
 
 add_compile_options(-Wno-pragmas)
