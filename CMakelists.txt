@@ -54,6 +54,7 @@ set(EXERCISES
     DefinindoTrajetorias
     VivencialObjetos3D
     VivencialVisualizador3D
+    GrauB
 )
 
 add_compile_options(-Wno-pragmas)
