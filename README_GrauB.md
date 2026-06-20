@@ -13,9 +13,9 @@ programável estudados no semestre em uma única aplicacao OpenGL/C++.
 
 ## Setup
 
-### Dependencias
+### Dependências
 
-| Biblioteca   | Versao       | Obtencao                                        |
+| Biblioteca   | Versão       | Obtenção                                        |
 |--------------|--------------|-------------------------------------------------|
 | GLFW         | 3.4          | Baixado automaticamente via CMake FetchContent.  |
 | GLM          | 1.1.0        | Baixado automaticamente via CMake FetchContent.  |
@@ -26,7 +26,7 @@ programável estudados no semestre em uma única aplicacao OpenGL/C++.
 
 > No Windows, o compilador MinGW deve estar no PATH. Verifique com `g++ --version`.
 
-### Compilacao (Windows)
+### Compilação (Windows)
 
 ```bash
 # 1. Entre na raiz do repositorio
@@ -62,7 +62,7 @@ cd build
 |----------------|-------------------------------------------------------------|
 | `M`            | Alternar modo **câmera FPS** e modo **objeto**            |
 | `WASD` + mouse | Mover e rotacionar câmera (modo câmera)                     |
-| `Tab`          | Selecionar proximo objeto (modo objeto)                     |
+| `Tab`          | Selecionar próximo objeto (modo objeto)                     |
 | `R`            | Modo Rotacao  ->  `X`/`Y`/`Z` togglam eixo de rotacao      |
 | `T`            | Modo Translacao  ->  Setas e  `I`/`K`               |
 | `S`            | Modo Escala uniforme  ->  `=` aumenta,  `-` diminui         |
@@ -70,23 +70,23 @@ cd build
 | `2`            | Toggle Fill light (luz de preenchimento)                    |
 | `3`            | Toggle Back light (rim light azul-fria)                     |
 | `4`            | Toggle textura UV <-> material puro (Ka/Kd/Ks)              |
-| `Space`        | Pausar / retomar animacoes Bezier                           |
+| `Space`        | Pausar / retomar animações Bezier                           |
 | `ESC`          | Fechar janela                                               |
 
 ---
 
 ## Funcionalidades Implementadas
 
-| Requisito                          | Implementacao no codigo                                      |
+| Requisito                          | Implementação no código                                      |
 |------------------------------------|--------------------------------------------------------------|
-| Multiplos OBJ com MTL e textura    | `loadSimpleOBJ()` + `loadMTL()` - le Ka, Kd, Ks, Ns, map_Kd |
+| Múltiplos OBJ com MTL e textura    | `loadSimpleOBJ()` + `loadMTL()` - le Ka, Kd, Ks, Ns, map_Kd |
 | Iluminacao Phong com 3 luzes       | Loop no Fragment Shader; teclas 1/2/3 habilitam cada luz     |
 | Atenuacao quadratica na difusa     | `att = 1 / (c + l*d + q*d^2)`                               |
 | Back light / rim light             | `rim = (1 - dot(N,V))^2.5 * lightColor * (1 - ambientScale)`|
 | Camera FPS                         | Classe `Camera` - lookAt, yaw/pitch via mouse, WASD          |
-| Selecao e transformacao de objetos | Tab seleciona; R/T/S + eixos aplicam rotacao/translacao/escala|
+| Seleção e transformação de objetos | Tab seleciona; R/T/S + eixos aplicam rotação/translação/escala|
 | Animacao por curva Bezier cubico   | `evalBezier()` - Bernstein grau 3; Space pausa/retoma        |
-| Arquivo de configuracao de cena    | `assets/scene.txt` - camera, frustum, luzes, objetos, curvas |
+| Arquivo de configuração de cena    | `assets/scene.txt` - câmera, frustum, luzes, objetos, curvas |
 
 ---
 
@@ -103,7 +103,7 @@ object   name objPath  px py pz  rx ry rz  scale  bezierSpeed
 bezier   name  p0x p0y p0z  p1x p1y p1z  p2x p2y p2z  p3x p3y p3z
 ```
 
-Parametros de `light`:
+Parámetros de `light`:
 - `id` = 0 (key), 1 (fill), 2 (back/rim)
 - `ambientScale` = 1.0 luz normal, 0.0 rim-only (back light)
 
@@ -115,19 +115,19 @@ Parametros de `light`:
 
 | Arquivo              | Origem                                                                 | Processamento      |
 |----------------------|------------------------------------------------------------------------|--------------------|
-| `Suzanne.obj`        | Modelo padrao "Suzanne" do Blender (CC0), arquivo `SuzanneAula.blend` fornecido pelo professor | Blender 4.3 - exportado com normais e coords UV |
+| `Suzanne.obj`        | Modelo padrão "Suzanne" do Blender (CC0), arquivo `SuzanneAula.blend` fornecido pelo professor | Blender 4.3 - exportado com normais e coords UV |
 | `SuzanneSubdiv1.obj` | Mesmo modelo com 1 nivel de Subdivision Surface                        | Blender 4.3        |
-| `Cube.obj`           | Cubo primitivo padrao do Blender                                       | Blender 4.3        |
+| `Cube.obj`           | Cubo primitivo padrão do Blender                                       | Blender 4.3        |
 | `Suzanne.png`        | Textura UV gerada no Blender, incluida no material de aula             | -                  |
 
 > Os modelos e a textura foram fornecidos pelo professor como material de aula.
-> A malha Suzanne e um modelo de dominio publico (CC0) nativo do Blender.
+> A malha Suzanne e um modelo de domínio público (CC0) nativo do Blender.
 
 ---
 
 ## Referencias
 
-### Tutoriais e Documentacao Tecnica
+### Tutoriais e Documentação Técnica
 
 - **LearnOpenGL** (Joey de Vries) - https://learnopengl.com/
 
